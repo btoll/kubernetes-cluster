@@ -13,6 +13,7 @@ apt-get install -y \
     curl \
     git \
     gnupg2 \
+    jq \
     wget
 
 # Fixes the "-bash: warning: setlocale: LC_ALL: cannot change locale (en_IN.UTF-8)" warning.

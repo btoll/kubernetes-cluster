@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: benjamintoll
+  labels:
+    app: benjamintoll
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: benjamintoll
+  template:
+    metadata:
+      labels:
+        app: benjamintoll
+    spec:
+      containers:
+        - name: benjamintoll
+          image: btoll/benjamintoll.com:latest
+          ports:
+            - name: http-port
+              containerPort: 80
+
+

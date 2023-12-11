@@ -16,17 +16,17 @@ echo 'PATH=/usr/local/go/bin:$PATH' >> /home/vagrant/.bashrc
 EOF
 
 # Install Helm.
-curl https://baltocdn.com/helm/signing.asc \
-    | gpg --dearmor  \
-    > /usr/share/keyrings/helm.gpg
+#curl https://baltocdn.com/helm/signing.asc \
+#    | gpg --dearmor  \
+#    > /usr/share/keyrings/helm.gpg
 
-echo "deb \
-    [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/helm.gpg] \
-    https://baltocdn.com/helm/stable/debian/ all main" \
-    | tee /etc/apt/sources.list.d/helm-stable-debian.list
+#echo "deb \
+#    [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/helm.gpg] \
+#    https://baltocdn.com/helm/stable/debian/ all main" \
+#    | tee /etc/apt/sources.list.d/helm-stable-debian.list
 
-apt-get update
-apt-get install -y helm
+#apt-get update
+#apt-get install -y helm
 
 # Install Redis.
 #helm repo add bitnami https://charts.bitnami.com/bitnami

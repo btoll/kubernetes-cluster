@@ -1,0 +1,17 @@
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: benjamintoll
+  labels:
+    app: benjamintoll
+spec:
+  maxReplicas: 5
+  minReplicas: 2
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: benjamintoll
+  targetCPUUtilizationPercentage: 70
+
+# Equivalent to
+# kubectl autoscale deployment app-tier --max=5 --min=1 --cpu-percent=70

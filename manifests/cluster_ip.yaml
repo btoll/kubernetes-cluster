@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: benjamintoll
+  labels:
+    app: benjamintoll
+spec:
+  selector:
+    app: benjamintoll
+  ports:
+    - port: 8080
+      targetPort: 80
+
+
